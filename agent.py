@@ -655,7 +655,7 @@ def generate_stats_radar(pokemon_names: list[str], title: str = "") -> str:
     ax.grid(True)
 
     os.makedirs(os.path.join(WORKDIR, "charts"), exist_ok=True)
-    filename = f"charts/radar_{_safe_filename(pokemon_names)}.png"
+    filename = f"./charts/radar_{_safe_filename(pokemon_names)}.png"
     filepath = os.path.join(WORKDIR, filename)
     plt.savefig(filepath, dpi=150, bbox_inches="tight")
     plt.close(fig)
@@ -699,7 +699,7 @@ def generate_stats_bar(pokemon_names: list[str], title: str = "") -> str:
     ax.grid(axis="y", alpha=0.3)
 
     os.makedirs(os.path.join(WORKDIR, "charts"), exist_ok=True)
-    filename = f"charts/bar_{_safe_filename(pokemon_names)}.png"
+    filename = f"./charts/bar_{_safe_filename(pokemon_names)}.png"
     filepath = os.path.join(WORKDIR, filename)
     plt.savefig(filepath, dpi=150, bbox_inches="tight")
     plt.close(fig)
